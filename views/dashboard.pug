@@ -1,0 +1,11 @@
+extends layout
+block content 
+  h1 Dashboard
+  h2 Generate Thumbnail 
+  form.form(action="/api/thumbnail" method="POST")
+    label(for="image") Enter public image url 
+    input(type="url" name="image")
+    button Generate
+
+  if image
+    img(src=`/uploads/${image}`, alt="")

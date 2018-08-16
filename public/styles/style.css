@@ -1,0 +1,5 @@
+.login-form input,
+.form input {
+  display: block;
+  margin: 10px 0;
+}
