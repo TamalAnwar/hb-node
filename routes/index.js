@@ -8,7 +8,7 @@ const appController = require('../controllers/appController');
 const verifyToken = (req, res, next) => {
   jwt.verify(req.session.token, process.env.SECRET, (err) => {
     if (err) {
-      res.redirect('/');
+      res.sendStatus(403);
     } else {
       next();
     }
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
-router.get('/dashboard', verifyToken, (req, res) => {
+router.get('/dashboard', (req, res) => {
   res.render('dashboard');
 });
 
