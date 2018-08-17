@@ -33,4 +33,7 @@ router.post('/login', (req, res) => {
 // Thumbnail API
 router.post('/api/thumbnail', verifyToken, appController.fileResize);
 
+// JSON Patch API
+router.post('/api/patch', verifyToken, appController.jsonPatch);
+
 module.exports = router;
