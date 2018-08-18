@@ -8,7 +8,7 @@ block content
       label(for="patch") Enter Patch
       textarea(name="patch", cols="50", rows="10" required)
       button Submit
-    
+    //- Show the patch after generation.
     if patchDoc
       - const patch = JSON.stringify(patchDoc)
       .image-area
@@ -21,7 +21,7 @@ block content
       label(for="image") Enter a public image url to generate a 150x150 pixel thumbnail image
       input(type="url" name="image" required)
       button Generate
-
+    //- Show thumbnail after generating an image
     if image
       .image-area
         h4 150x150 Thumbnail Image
