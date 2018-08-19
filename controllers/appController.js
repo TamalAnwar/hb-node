@@ -21,7 +21,7 @@ exports.fileResize = async (req, res) => {
     // Get the file extension for later use
     const ext = await myImage.getExtension();
     // Resize the image
-    await myImage.resize(150, 150);
+    await myImage.resize(50, 50);
     // Setting the name of the image file as a unique
     // value and saving it in a variable
     const image = `${uuid.v4()}.${ext}`;

@@ -21,7 +21,7 @@ You can patch a JSON file with this tool. Just enter a json object, and a patch 
 
 ### Generate Thumbnail
 
-Enter a public image file in the text field and click Generate. You will get a 150x150 resized version of that image on the next page load.
+Enter a public image file in the text field and click Generate. You will get a 50x50 resized version of that image on the next page load.
 
 # Under The Hood
 
@@ -53,7 +53,7 @@ I used the `jimp` module to resize the image.
 
 In the `fileResize` middleware function, I added a `try catch` block for this operation. I first saved the image into a local variable `myImage`. I called _jimp.read(req.body.image)_ to read the file.
 
-Please see inline comments in the file _/controllers/appController.js_ for more details. But the basic rundown is, I call resize the image to 150x150 and then save it to the disc giving a unique identifier.
+Please see inline comments in the file _/controllers/appController.js_ for more details. But the basic rundown is, I call resize the image to 50x50 and then save it to the disc giving a unique identifier.
 
 For the unique ID I have used the _uuid_ module.
 
@@ -77,8 +77,6 @@ Finally I render out the dashboard file by passing down the patchDoc.
 
 In the dashboard.pug file, when there is a patchDoc variable present, it will usually render the patch. But before that can happen I had to stringify that code once again.
 
-## Dockerfile & Test
+## Dockerfile
 
 I added Dockerfile with node text, however I was unable to push an image to the dockerhub because I don't have experience with Docker and had trouble configuring docker on my computer.
-
-I added Mocha and Chai for testing, but could not implement test suite.

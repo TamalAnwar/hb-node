@@ -3,12 +3,12 @@ block content
   .generate-thumbnail
     h2 Generate Thumbnail 
     form.form(action="/api/thumbnail" method="POST")
-      label(for="image") Enter a public image url to generate a 150x150 pixel thumbnail image
+      label(for="image") Enter a public image url to generate a 50x50 pixel thumbnail image
       input(type="url" name="image" required)
       button Generate
     //- Show thumbnail after generating an image
     if image
       .image-area
-        h4 150x150 Thumbnail Image
+        h4 50x50 Thumbnail Image
         p Please right click and "Save image as.." to download it:
         img(src=`/uploads/${image}`, alt="")
