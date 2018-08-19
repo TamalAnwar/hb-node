@@ -13,7 +13,7 @@ Use `npm run dev` to start the development run
 
 Launch the app by going to **localhost:3000**
 
-The front page shows a login screen. Enter any username or password. Now on the next page **/dashboard** you will see two secions, **JSON Patch** and **Generate Thumbnail**
+The front page shows a login screen. Enter any username or password. Now on the next page **/thumbnail** you will see two secions, **JSON Patch** and **Generate Thumbnail**
 
 ### JSON Patch
 
@@ -63,7 +63,7 @@ In case of error, I redirect back the user to the last page.
 
 ### Displaying the thumbnail image
 
-In the **views/dashboard.pug** file, I have added a conditional block `if image` it will be activated only when there is the image present. It will display the image file right after the user successfully generated the thumbnail image.
+In the **views/thumbnail.pug** file, I have added a conditional block `if image` it will be activated only when there is the image present. It will display the image file right after the user successfully generated the thumbnail image.
 
 ## JSON Patch
 
