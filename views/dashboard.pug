@@ -1,29 +1,5 @@
 extends layout
 block content 
-  .json-patch
-    h2 JSON Patch
-    form.form(action="/api/patch" method="POST")
-      label(for="json") Enter JSON
-      textarea(name="json", cols="50", rows="10" required)
-      label(for="patch") Enter Patch
-      textarea(name="patch", cols="50", rows="10" required)
-      button Submit
-    //- Show the patch after generation.
-    if patchDoc
-      - const patch = JSON.stringify(patchDoc)
-      .image-area
-        h4 Your Patch
-        pre= patch
-
-  .generate-thumbnail
-    h2 Generate Thumbnail 
-    form.form(action="/api/thumbnail" method="POST")
-      label(for="image") Enter a public image url to generate a 150x150 pixel thumbnail image
-      input(type="url" name="image" required)
-      button Generate
-    //- Show thumbnail after generating an image
-    if image
-      .image-area
-        h4 150x150 Thumbnail Image
-        p Please right click and "Save image as.." to download it:
-        img(src=`/uploads/${image}`, alt="")
+  
+  
+  

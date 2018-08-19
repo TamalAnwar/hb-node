@@ -76,3 +76,9 @@ Read the function for more details on the steps. In summary I patched the file. 
 Finally I render out the dashboard file by passing down the patchDoc.
 
 In the dashboard.pug file, when there is a patchDoc variable present, it will usually render the patch. But before that can happen I had to stringify that code once again.
+
+## Dockerfile & Test
+
+I added Dockerfile with node text, however I was unable to push an image to the dockerhub because I don't have experience with Docker and had trouble configuring docker on my computer.
+
+I added Mocha and Chai for testing, but could not implement test suite.

@@ -6,6 +6,16 @@ body {
   background: #c3cbe2;
   font-family: Arial, Helvetica, sans-serif;
   color: #333333;
+  margin: 0;
+}
+
+a {
+  color: #204ed3;
+}
+
+h1,
+h2 {
+  margin-top: 0;
 }
 
 .login-form input,
@@ -22,20 +32,32 @@ body {
   padding: 5px;
 }
 
+.header {
+  background: #ffffb2;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+
 .wrapper {
   margin: 0 auto;
-  width: 1000px;
+  width: 600px;
   max-width: 100%;
-  display: grid;
-  grid-template-columns: 49% 49%;
-  grid-gap: 20px;
 }
 
 .generate-thumbnail,
 .json-patch,
 .login-form {
   background: #f0f7ff;
-  padding: 1rem;
+  padding: 50px;
   border-radius: 5px;
 }
 

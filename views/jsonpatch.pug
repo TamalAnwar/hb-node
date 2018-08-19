@@ -1,0 +1,16 @@
+extends layout
+block content 
+  .json-patch
+    h2 JSON Patch
+    form.form(action="/api/patch" method="POST")
+      label(for="json") Enter JSON
+      textarea(name="json", cols="50", rows="10" required)
+      label(for="patch") Enter Patch
+      textarea(name="patch", cols="50", rows="10" required)
+      button Submit
+    //- Show the patch after generation.
+    if patchDoc
+      - const patch = JSON.stringify(patchDoc)
+      .image-area
+        h4 Your Patch
+        pre= patch

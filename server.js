@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
 const session = require('express-session');
+const validator = require('express-validator');
 require('dotenv').config({ path: 'variables.env' });
 
 app.use(
@@ -11,6 +12,8 @@ app.use(
     secret: process.env.SECRET
   })
 );
+
+app.use(validator());
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
